@@ -1,0 +1,44 @@
+{
+  "status": 0,
+  "msg": "",
+  "data": {
+    "pages": [
+      {
+        "label": "Home",
+        "url": "/",
+        "redirect": "/index/1"
+      },
+      {
+        "children": [
+          {
+            "label": "分组一",
+            "url": "/index",
+            "icon": "fa-solid fa-user",
+            "rewrite": "/index/1",
+            "children": [
+              {
+                "label": "页面A-1",
+                "url": "/index/1",
+                "schema": {
+                  "type": "page",
+                  "tile": "页面A",
+                  "body": "inline page..."
+                }
+              },
+              {
+                "label": "页面A-2",
+                "url": "/index/2",
+                "schemaApi": "jsonp:/pages/jsonp.js?callback=jsonpCallback"
+              },
+              {
+                "label": "页面A-3",
+                "url": "/index/3",
+                "schemaApi": "get:/pages/simple.json"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
